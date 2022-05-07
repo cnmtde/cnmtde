@@ -1,7 +1,9 @@
 {{
-  config(
-    materialized='table'
-  )
+    config(
+        materialized='incremental',
+        incremental_strategy='merge',
+        merge_update_columns = ['duplicate_check_result', 'type_of_duplicate','type_of_duplicate']
+    )
 }}
 
 with s_cust_duplicate_check as (
