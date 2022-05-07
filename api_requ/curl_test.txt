@@ -1,0 +1,5 @@
+curl --request POST \
+  --url https://cloud.getdbt.com/api/v2/accounts/61840/jobs/84619/run/ \
+  --header 'Content-Type: application/json' \
+  --header 'Authorization: Token b1f41e18717f51da1060141ee966576bf8b694ba' \
+  --data '{"cause":"test"}'
