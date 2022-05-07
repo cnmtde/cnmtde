@@ -15,18 +15,4 @@ with tmp_duplicate_check as (
     from `gluon-mytoys-sandbox-d.cn_dbt_src.rdv_l_cust_bill_adr` a
     join `gluon-mytoys-sandbox-d.cn_dbt_src.rdv_sl_order_headers` b on a.happsaddr_hash = b.HADDRINV_HASH
 )
-select * from tmp_duplicate_check;
-insert into `gluon-mytoys-sandbox-d.cn_dbt_src.bdv_s_cust_duplicate_check`(lcustbadd_hash,
-lcustbadd_hash_master,
-duplicate_check_result,
-type_of_duplicate,
-load_dts,
-load_dts_end
-)
-select lcustbadd_hash,
-lcustbadd_hash_master,
-duplicate_check_result,
-type_of_duplicate,
-load_dts,
-load_dts_end
-from `gluon-mytoys-sandbox-d.cn_dbt_src.tmp_s_cust_duplicate_check`;
+select * from tmp_duplicate_check
