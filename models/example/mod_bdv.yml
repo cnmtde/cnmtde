@@ -1,0 +1,12 @@
+version: 2
+
+models:
+  - name: s_cust_duplicate_check
+    description: One record per customer bill addresses
+    columns:
+      - name: lcustbadd_hash
+      - name: lcustbadd_hash_master
+      - name: load_dts
+      - name: load_dts_end
+      - name: type_of_duplicate
+      - name: duplicate_check_result
