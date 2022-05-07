@@ -10,3 +10,8 @@ models:
       - name: load_dts_end
       - name: type_of_duplicate
       - name: duplicate_check_result
+  - name: l_cust_bill_addresses
+    description: One record per customer bill addresses
+    columns:
+      - name: lcustbadd_hash
+      - name: hcust_hash
