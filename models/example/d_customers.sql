@@ -1,6 +1,7 @@
 {{
   config(
         materialized='incremental',
+        unique_key = 'customer_id',
         incremental_strategy='merge',
         merge_update_columns = ['deduplicated_customer_id', 'deduplicated_customer_flag']
   )
