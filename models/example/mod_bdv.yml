@@ -2,7 +2,6 @@ version: 1
 
 models:
   - name: s_cust_duplicate_check
-  +materialized: table
     description: One record per customer bill addresses
     columns:
       - name: lcustbadd_hash
