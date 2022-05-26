@@ -5,7 +5,7 @@
 }}
 
 with h_customers as(
-    select *
-    from `gluon-mytoys-sandbox-d.cn_dbt_src.h_customers`
+    select customer_id
+    from `gluon-mytoys-sandbox-d.cn_dbt_src.d_customers`
 )
 select * from h_customers
